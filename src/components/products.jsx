@@ -6,12 +6,16 @@ class Products extends Component {
         const { products, addToCart } = this.props;
         return (
             <Fragment>
-                {products.map((product, i) =>
-                    <Product
-                        key={i}
-                        addToCart={addToCart}
-                        product={product}
-                    />)}
+                <div className="container py-4">
+                    <div className="row row-cols-lg-3 row-cols-sm-2 row-cols-1">
+                        {products.map((product, i) =>
+                            <Product
+                                key={i}
+                                addToCart={addToCart}
+                                product={product}
+                            />)}
+                    </div>
+                </div>
             </Fragment>
         )
     }
