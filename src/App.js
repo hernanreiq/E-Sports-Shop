@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Main from "./views/main";
+import Products from "./components/products";
 
 class App extends Component {
   state = {
@@ -13,7 +13,10 @@ class App extends Component {
   }
   render() {
     return (
-      <Main />
+      <Products
+        addToCart={(text) => console.log(`Has agregado ${text} al carrito`)}
+        products={this.state.products}
+      />
     )
   }
 }
