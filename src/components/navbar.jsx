@@ -1,7 +1,6 @@
 import { Component } from "react";
-import { Navbar, Container, Button } from "react-bootstrap";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Navbar, Container } from "react-bootstrap";
+import Cart from "./cart";
 
 class NavbarCustom extends Component {
     render() {
@@ -9,9 +8,7 @@ class NavbarCustom extends Component {
             <Navbar bg="dark" expand="lg" className="shadow">
                 <Container>
                     <Navbar.Brand className="text-white">E-Sports Shop</Navbar.Brand>
-                    <Button variant="success" onClick={() => console.log('Show the cart')}>
-                        <FontAwesomeIcon icon={faShoppingCart} />
-                    </Button>
+                    <Cart />
                 </Container>
             </Navbar>
         )
