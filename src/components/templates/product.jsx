@@ -17,7 +17,7 @@ class Product extends Component {
                                     RD$ {FormatPrice(product.price)}
                                 </Badge>
                             </h5>
-                            <Button variant="success" onClick={() => addToCart(product.name)}>
+                            <Button variant="success" onClick={() => addToCart(product)}>
                                 Agregar al carrito
                             </Button>
                         </Card.Body>

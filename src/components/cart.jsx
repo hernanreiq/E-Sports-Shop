@@ -6,11 +6,14 @@ import BubbleAlert from "./bubble-alert";
 
 class Cart extends Component {
     render() {
+        const { cart } = this.props;
         return (
             <div>
-                <span className="bubble-alert">
-                    <BubbleAlert value={2} />
-                </span>
+                {cart.length > 0 &&
+                    <span className="bubble-alert">
+                        <BubbleAlert value={10} />
+                    </span>
+                }
                 <Button variant="success" onClick={() => console.log('Show the cart')}>
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </Button>

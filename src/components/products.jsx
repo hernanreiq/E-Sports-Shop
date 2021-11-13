@@ -5,10 +5,10 @@ import NavbarCustom from "./navbar";
 
 class Products extends Component {
     render() {
-        const { products, addToCart } = this.props;
+        const { products, addToCart, cart } = this.props;
         return (
             <Fragment>
-                <NavbarCustom />
+                <NavbarCustom cart={cart} />
                 <Layout>
                     {products.map((product, i) =>
                         <Product
