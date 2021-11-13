@@ -1,5 +1,7 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 import Products from "./components/products";
+import NavbarCustom from "./components/navbar";
+import Layout from "./components/layout";
 
 class App extends Component {
   state = {
@@ -35,11 +37,15 @@ class App extends Component {
   render() {
     console.log(this.state.cart)
     return (
-      <Products
-        addToCart={this.addToCart}
-        products={this.state.products}
-        cart={this.state.cart}
-      />
+      <Fragment>
+        <NavbarCustom cart={this.state.cart} />
+        <Layout>
+          <Products
+            addToCart={this.addToCart}
+            products={this.state.products}
+          />
+        </Layout>
+      </Fragment>
     )
   }
 }

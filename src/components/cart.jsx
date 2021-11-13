@@ -7,11 +7,13 @@ import BubbleAlert from "./bubble-alert";
 class Cart extends Component {
     render() {
         const { cart } = this.props;
+        //Acumulando la cantidad de todos los productos
+        const quantity = cart.reduce((acc, el) => acc + el.quantity, 0);
         return (
             <div>
                 {cart.length > 0 &&
                     <span className="bubble-alert">
-                        <BubbleAlert value={10} />
+                        <BubbleAlert value={quantity} />
                     </span>
                 }
                 <Button variant="success" onClick={() => console.log('Show the cart')}>

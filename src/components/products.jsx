@@ -1,22 +1,17 @@
 import { Component, Fragment } from "react";
 import Product from "./templates/product";
-import Layout from "./layout";
-import NavbarCustom from "./navbar";
 
 class Products extends Component {
     render() {
-        const { products, addToCart, cart } = this.props;
+        const { products, addToCart } = this.props;
         return (
             <Fragment>
-                <NavbarCustom cart={cart} />
-                <Layout>
-                    {products.map((product, i) =>
-                        <Product
-                            key={i}
-                            addToCart={addToCart}
-                            product={product}
-                        />)}
-                </Layout>
+                {products.map((product, i) =>
+                    <Product
+                        key={i}
+                        addToCart={addToCart}
+                        product={product}
+                    />)}
             </Fragment>
         )
     }
