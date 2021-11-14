@@ -2,6 +2,7 @@ import { Component, Fragment } from "react";
 import Products from "./components/products";
 import NavbarCustom from "./components/navbar";
 import Layout from "./components/layout";
+import { Footer } from "./components/footer";
 
 class App extends Component {
   state = {
@@ -79,6 +80,7 @@ class App extends Component {
             products={this.state.products}
           />
         </Layout>
+        <Footer />
       </Fragment>
     )
   }
