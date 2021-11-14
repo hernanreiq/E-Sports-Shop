@@ -10,6 +10,19 @@ body {
   background: linear-gradient(to right, #33001b, #ff0084, #33001b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/*BARRA DE SCROLL*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #000000; 
+  background-color: #33001b;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0084; 
+  border-radius: 10px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
