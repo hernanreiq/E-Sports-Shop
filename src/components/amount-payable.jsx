@@ -1,9 +1,9 @@
 import { Component } from "react";
-import { FormatPrice } from "./helpers/functions";
+import { FormatPrice, PaymentAccepted } from "./helpers/functions";
 
 class AmountPayable extends Component {
     render() {
-        const { cart } = this.props;
+        const { cart, cleanCart } = this.props;
         let toPay = 0;
         return (
             <div className="card">
@@ -20,7 +20,13 @@ class AmountPayable extends Component {
                     </h5>
                 </div>
                 <div className="card-footer bg-secondary">
-                    <button className="btn btn-success w-100">
+                    <button
+                        className="btn btn-success w-100"
+                        onClick={() => {
+                            cleanCart();
+                            PaymentAccepted(toPay);
+                        }}
+                    >
                         Pagar
                     </button>
                 </div>

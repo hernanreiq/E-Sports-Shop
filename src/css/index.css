@@ -52,3 +52,7 @@ code {
 .cart-button-product {
   cursor: pointer;
 }
+
+.swal2-styled, .swal2-confirm {
+  background-color: #28a745 !important;
+}

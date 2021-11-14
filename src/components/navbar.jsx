@@ -4,7 +4,7 @@ import Cart from "./cart";
 
 class NavbarCustom extends Component {
     render() {
-        const { cart, addToCart, subtractToCart } = this.props;
+        const { cart, addToCart, subtractToCart, cleanCart } = this.props;
         return (
             <Navbar bg="dark" expand="lg" className="shadow">
                 <Container>
@@ -13,6 +13,7 @@ class NavbarCustom extends Component {
                         cart={cart}
                         addToCart={addToCart}
                         subtractToCart={subtractToCart}
+                        cleanCart={cleanCart}
                     />
                 </Container>
             </Navbar>

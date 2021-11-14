@@ -47,11 +47,21 @@ class App extends Component {
         return this.setState({ cart: newCart })
       }
     } else {
+      //Si el producto existe en el carrito entonces se elimina
       if (cart.find(x => x.name === product.name)) {
         cart.splice(index, 1);
         return this.setState({ cart: cart })
       }
     }
+  }
+
+  cleanCart = () => {
+    let { cart } = this.state;
+    if(cart.length > 0) {
+      this.setState({
+        cart: []
+      })
+    } 
   }
 
   render() {
@@ -61,6 +71,7 @@ class App extends Component {
           cart={this.state.cart}
           addToCart={this.addToCart}
           subtractToCart={this.subtractToCart}
+          cleanCart={this.cleanCart}
         />
         <Layout>
           <Products

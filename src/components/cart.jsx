@@ -15,7 +15,7 @@ class Cart extends Component {
         })
     }
     render() {
-        const { cart, addToCart, subtractToCart } = this.props;
+        const { cart, addToCart, subtractToCart, cleanCart } = this.props;
         //Acumulando la cantidad de todos los productos
         const quantity = cart.reduce((acc, el) => acc + el.quantity, 0);
         return (
@@ -33,6 +33,7 @@ class Cart extends Component {
                         cart={cart}
                         addToCart={addToCart}
                         subtractToCart={subtractToCart}
+                        cleanCart={cleanCart}
                     />
                 }
             </div>
