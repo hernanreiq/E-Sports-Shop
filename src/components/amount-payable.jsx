@@ -8,7 +8,7 @@ class AmountPayable extends Component {
         return (
             <div className="card">
                 <div className="card-body text-center bg-dark">
-                    <h3 className="text-white">Total</h3>
+                    <h3 className="text-white">TOTAL</h3>
                     <h5 className="mb-0">
                         <span className="badge badge-primary badge-pill">
                             {cart.map((product) => {
