@@ -1,0 +1,8 @@
+{
+  "short_name": "E-Sports-Shop",
+  "name": "E-Sports Shop",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
