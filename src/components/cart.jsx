@@ -10,9 +10,11 @@ class Cart extends Component {
         showCart: false
     }
     showTheCart = () => {
-        this.setState({
-            showCart: !this.state.showCart
-        })
+        if (this.props.cart.length > 0) {
+            this.setState({
+                showCart: !this.state.showCart
+            })
+        }
     }
     render() {
         const { cart, addToCart, subtractToCart, cleanCart } = this.props;
@@ -34,6 +36,7 @@ class Cart extends Component {
                         addToCart={addToCart}
                         subtractToCart={subtractToCart}
                         cleanCart={cleanCart}
+                        showTheCart={this.showTheCart}
                     />
                 }
             </div>

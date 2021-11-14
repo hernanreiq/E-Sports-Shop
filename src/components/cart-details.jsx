@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class CartDetails extends Component {
     render() {
-        const { cart, addToCart, subtractToCart, cleanCart } = this.props;
+        const { cart, addToCart, subtractToCart, cleanCart, showTheCart } = this.props;
         return (
             <div className="cart-details-container shadow">
                 {cart.map((product, i) => {
@@ -49,6 +49,7 @@ class CartDetails extends Component {
                 <AmountPayable
                     cart={cart}
                     cleanCart={cleanCart}
+                    showTheCart={showTheCart}
                 />
             </div>
         )

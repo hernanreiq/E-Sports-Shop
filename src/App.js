@@ -12,7 +12,7 @@ class App extends Component {
       { name: 'Monitor', price: 13000, img: '/E-Sports-Shop/products/monitor.jpg' },
       { name: 'Mouse', price: 350, img: '/E-Sports-Shop/products/raton.jpg' },
       { name: 'Teclado', price: 1200, img: '/E-Sports-Shop/products/teclado.jpg' },
-      { name: 'Bocina', price: 4200, img: '/E-Sports-Shop/products/bocina.jpg' }
+      { name: 'Bocinas', price: 4200, img: '/E-Sports-Shop/products/bocina.jpg' }
     ],
     cart: []
   }
