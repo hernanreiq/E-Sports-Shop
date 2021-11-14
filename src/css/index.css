@@ -36,7 +36,7 @@ code {
 
 .cart-details-container {
   background-color: #fff;
-  width: 250px;
+  width: 260px;
   border-radius: 3px;
   position: absolute;
   z-index: 100;
@@ -47,4 +47,8 @@ code {
 .cart-img-product {
   width: 50px;
   border-radius: 3px;
+}
+
+.cart-button-product {
+  cursor: pointer;
 }
