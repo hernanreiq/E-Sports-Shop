@@ -12,7 +12,9 @@ class Product extends Component {
                         <Card.Img variant="top" src={product.img} alt={product.name} />
                         <Card.Body className="text-center">
                             <Card.Title className="mb-1">{product.name}</Card.Title>
-                            <h5 className="mb-4">
+                        </Card.Body>
+                        <Card.Footer className="text-center bg-dark">
+                            <h5 className="mb-3">
                                 <Badge pill variant="primary">
                                     RD$ {FormatPrice(product.price)}
                                 </Badge>
@@ -20,7 +22,7 @@ class Product extends Component {
                             <Button variant="success" onClick={() => addToCart(product)}>
                                 Agregar al carrito
                             </Button>
-                        </Card.Body>
+                        </Card.Footer>
                     </Card>
                 </div>
             </Fragment>
