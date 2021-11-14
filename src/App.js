@@ -7,12 +7,12 @@ import { Footer } from "./components/footer";
 class App extends Component {
   state = {
     products: [
-      { name: 'Silla', price: 6000, img: '/products/silla.jpg' },
-      { name: 'Audífonos', price: 1500, img: '/products/audifonos.jpg' },
-      { name: 'Monitor', price: 13000, img: '/products/monitor.jpg' },
-      { name: 'Mouse', price: 350, img: '/products/raton.jpg' },
-      { name: 'Teclado', price: 1200, img: '/products/teclado.jpg' },
-      { name: 'Bocina', price: 4200, img: '/products/bocina.jpg' }
+      { name: 'Silla', price: 6000, img: '/E-Sports-Shop/products/silla.jpg' },
+      { name: 'Audífonos', price: 1500, img: '/E-Sports-Shop/products/audifonos.jpg' },
+      { name: 'Monitor', price: 13000, img: '/E-Sports-Shop/products/monitor.jpg' },
+      { name: 'Mouse', price: 350, img: '/E-Sports-Shop/products/raton.jpg' },
+      { name: 'Teclado', price: 1200, img: '/E-Sports-Shop/products/teclado.jpg' },
+      { name: 'Bocina', price: 4200, img: '/E-Sports-Shop/products/bocina.jpg' }
     ],
     cart: []
   }
