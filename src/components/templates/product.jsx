@@ -7,7 +7,7 @@ class Product extends Component {
         const { product, addToCart } = this.props;
         return (
             <Fragment>
-                <div className="col my-3 px-2">
+                <div className="col my-3">
                     <Card className="shadow">
                         <Card.Img variant="top" src={product.img} alt={product.name} />
                         <Card.Body className="text-center">

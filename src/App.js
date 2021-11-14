@@ -35,7 +35,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.cart)
     return (
       <Fragment>
         <NavbarCustom cart={this.state.cart} />

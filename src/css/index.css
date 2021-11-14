@@ -29,3 +29,22 @@ code {
   font-size: 14px;
   width: 20px;
 }
+
+.cart-container {
+  position: relative;
+}
+
+.cart-details-container {
+  background-color: #fff;
+  width: 250px;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 100;
+  margin-top: 18px;
+  right: 0px;
+}
+
+.cart-img-product {
+  width: 50px;
+  border-radius: 3px;
+}
