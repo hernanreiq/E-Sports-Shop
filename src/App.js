@@ -10,7 +10,8 @@ class App extends Component {
       { name: 'Audífonos', price: 1500, img: '/products/audifonos.jpg' },
       { name: 'Monitor', price: 13000, img: '/products/monitor.jpg' },
       { name: 'Mouse', price: 350, img: '/products/raton.jpg' },
-      { name: 'Teclado', price: 1200, img: '/products/teclado.jpg' }
+      { name: 'Teclado', price: 1200, img: '/products/teclado.jpg' },
+      { name: 'Bocina', price: 4200, img: '/products/bocina.jpg' }
     ],
     cart: []
   }
@@ -34,10 +35,33 @@ class App extends Component {
     })
   }
 
+  subtractToCart = (product, index) => {
+    let { cart } = this.state;
+    if (product.quantity > 1) {
+      //si el producto existe en el carrito se le resta uno
+      if (cart.find(x => x.name === product.name)) {
+        const newCart = cart.map(x => x.name === product.name ? ({
+          ...x,
+          quantity: x.quantity - 1
+        }) : x)
+        return this.setState({ cart: newCart })
+      }
+    } else {
+      if (cart.find(x => x.name === product.name)) {
+        cart.splice(index, 1);
+        return this.setState({ cart: cart })
+      }
+    }
+  }
+
   render() {
     return (
       <Fragment>
-        <NavbarCustom cart={this.state.cart} />
+        <NavbarCustom
+          cart={this.state.cart}
+          addToCart={this.addToCart}
+          subtractToCart={this.subtractToCart}
+        />
         <Layout>
           <Products
             addToCart={this.addToCart}

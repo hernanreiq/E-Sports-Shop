@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class CartDetails extends Component {
     render() {
-        const { cart } = this.props;
+        const { cart, addToCart, subtractToCart } = this.props;
         return (
             <div className="cart-details-container shadow">
                 {cart.map((product, i) => {
@@ -24,10 +24,22 @@ class CartDetails extends Component {
                                     </div>
                                     <div className="p-0 col-1 text-center">
                                         {product.quantity > 1 ?
-                                            <FontAwesomeIcon icon={faMinusCircle} className="text-danger cart-button-product" /> :
-                                            <FontAwesomeIcon icon={faTrashAlt} className="text-danger cart-button-product" />
+                                            <FontAwesomeIcon
+                                                icon={faMinusCircle}
+                                                className="text-danger cart-button-product"
+                                                onClick={() => subtractToCart(product, i)}
+                                            /> :
+                                            <FontAwesomeIcon
+                                                icon={faTrashAlt}
+                                                className="text-danger cart-button-product"
+                                                onClick={() => subtractToCart(product, i)}
+                                            />
                                         }
-                                        <FontAwesomeIcon icon={faPlusCircle} className="text-success cart-button-product" />
+                                        <FontAwesomeIcon
+                                            icon={faPlusCircle}
+                                            className="text-success cart-button-product"
+                                            onClick={() => addToCart(product)}
+                                        />
                                     </div>
                                 </div>
                             </div>
